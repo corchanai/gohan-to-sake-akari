@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ごはんと酒 灯り</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="top" style="position:sticky; top:0; z-index:100; background:rgba(13,9,5,0.97); border-bottom:1px solid #2a2016; backdrop-filter:blur(8px); height:64px; display:flex; align-items:center; justify-content:space-between; padding:0 20px;">
+  <a href="#top" style="display:flex; align-items:center; text-decoration:none; flex-shrink:0;">
+    <img src="uploads/akari_logo.png" alt="ごはんと酒 灯り" style="height:42px; max-width:200px; object-fit:contain; object-position:left center; display:block; filter:invert(1) sepia(0.3);">
+  </a>
+  <nav class="pc-nav" style="display:none; gap:32px; align-items:center;">
+    <a href="#specials" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">おすすめ</a>
+    <a href="#menu" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">定番メニュー</a>
+    <a href="#news" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">お知らせ</a>
+    <a href="#info" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">店舗情報</a>
+  </nav>
+  <div class="sp-only" style="display:flex; gap:16px; font-size:11px; color:#8a7a6a;">
+    <a href="#specials" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">おすすめ</a>
+    <a href="#menu" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">メニュー</a>
+    <a href="#news" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">お知らせ</a>
+    <a href="#info" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">店舗情報</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero-section" style="min-height:480px; background-image:url(uploads/akari_hero.png); background-size:cover; background-position:center center; background-repeat:no-repeat; position:relative; display:flex; align-items:flex-end;">
+  <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(18,10,4,0.88) 0%, rgba(18,10,4,0.5) 45%, rgba(18,10,4,0.12) 100%);"></div>
+  <div class="hero-left-grad" style="display:none; position:absolute; inset:0; background:linear-gradient(to right, rgba(18,10,4,0.55) 0%, transparent 58%);"></div>
+  <div class="hero-content" style="position:relative; z-index:1; padding:0 24px 52px; width:100%;">
+    <p style="font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:0.16em; margin-bottom:14px; text-transform:uppercase; font-family:'Noto Sans JP',sans-serif;">Gohan to Sake Akari</p>
+    <h1 class="serif" style="font-size:28px; color:white; line-height:1.65; letter-spacing:0.04em; margin-bottom:16px; font-weight:500; text-shadow:0 2px 12px rgba(0,0,0,0.35);">
+      今日のおすすめが、<br>ちゃんと伝わる<br>小さな居酒屋サイト。
+    </h1>
+    <p style="font-size:13px; color:rgba(255,255,255,0.8); line-height:2; margin-bottom:30px; text-shadow:0 1px 6px rgba(0,0,0,0.4); font-weight:300;">
+      日替わりの一品、季節のお酒、営業のお知らせまで。<br>
+      お店の"今日"を、わかりやすく届けます。
+    </p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="#specials" style="display:inline-flex; align-items:center; padding:14px 28px; background:#3f5835; color:white; text-decoration:none; font-size:13px; letter-spacing:0.07em; border-radius:2px; font-family:'Noto Sans JP',sans-serif; font-weight:500; box-shadow:0 2px 10px rgba(0,0,0,0.3);">おすすめを見る</a>
+      <a href="#news" style="display:inline-flex; align-items:center; padding:13px 28px; background:transparent; color:white; text-decoration:none; font-size:13px; letter-spacing:0.07em; border-radius:2px; border:1.5px solid rgba(255,255,255,0.45); font-family:'Noto Sans JP',sans-serif;">お知らせを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept" style="background:#0d0905; padding:60px 20px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase; font-family:'Noto Sans JP',sans-serif;">Concept</span>
+    </div>
+    <h2 class="serif" style="font-size:26px; font-weight:500; line-height:1.6; margin-bottom:18px; color:#ede5d8; letter-spacing:0.03em;">
+      ふらっと寄れて、<br>ちゃんとおいしい。
+    </h2>
+    <p style="font-size:13px; color:#b8a898; line-height:2.2; margin-bottom:36px; max-width:520px; font-weight:300;">
+      旬の食材を使った小皿料理と、気軽に楽しめるお酒を揃えた、小さな居酒屋です。<br>
+      仕事帰りの一杯にも、友人とのゆっくりした時間にも。<br>
+      その日ごとのおすすめをご用意してお待ちしています。
+    </p>
+    <div class="concept-grid" style="display:grid; grid-template-columns:1fr; gap:16px;">
+      <div>
+        <div style="overflow:hidden; border-radius:3px; aspect-ratio:4/3;">
+          <img src="uploads/コンセプト3.png" alt="季節の小皿料理" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <p class="serif" style="font-size:12px; color:#8a7a6a; margin-top:10px; text-align:center; letter-spacing:0.06em;">季節の小皿料理</p>
+      </div>
+      <div>
+        <div style="overflow:hidden; border-radius:3px; aspect-ratio:4/3;">
+          <img src="uploads/コンセプト2.png" alt="気軽に楽しめるお酒" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <p class="serif" style="font-size:12px; color:#8a7a6a; margin-top:10px; text-align:center; letter-spacing:0.06em;">気軽に楽しめるお酒</p>
+      </div>
+      <div>
+        <div style="overflow:hidden; border-radius:3px; aspect-ratio:4/3;">
+          <img src="uploads/コンセプト1.png" alt="あたたかいカウンター席" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <p class="serif" style="font-size:12px; color:#8a7a6a; margin-top:10px; text-align:center; letter-spacing:0.06em;">あたたかいカウンター席</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TODAY'S SPECIALS -->
+<section id="specials" style="background:#141009; padding:60px 0 48px;">
+  <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">Today's Specials</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:6px;">
+      <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; letter-spacing:0.03em;">本日のおすすめ</h2>
+      <div style="display:inline-flex; align-items:center; gap:6px; background:#2a2016; padding:4px 11px; border-radius:20px; font-size:11px; color:#7a6a5a; letter-spacing:0.04em;">
+        <span style="width:5px; height:5px; border-radius:50%; background:#4d6e42; animation:pulse 1.5s infinite; display:inline-block; flex-shrink:0;"></span>
+        日々更新
+      </div>
+    </div>
+    <p style="font-size:12px; color:#7a6a5a; margin-bottom:20px; letter-spacing:0.02em; font-weight:300;">※ 内容は日によって変わります</p>
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+      <span style="font-size:11px; color:#5a4e40; font-style:italic; font-weight:300;">← スクロールでさらに見る</span>
+      <div style="display:flex; gap:6px;">
+        <div class="carousel-arrow" data-arrow="prev" data-target="specials-track">‹</div>
+        <div class="carousel-arrow" data-arrow="next" data-target="specials-track">›</div>
+      </div>
+    </div>
+  </div>
+  <div id="specials-track" class="carousel-track" data-auto-scroll="true"></div>
+  <div id="specials-dots" style="display:flex; justify-content:center; gap:5px; padding:0 20px; margin-top:2px;"></div>
+</section>
+
+<!-- REGULAR MENU -->
+<section id="menu" style="background:#0d0905; padding:60px 0 44px;">
+  <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">Menu</span>
+    </div>
+    <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; margin-bottom:8px; letter-spacing:0.03em;">定番メニュー</h2>
+    <p style="font-size:13px; color:#7a6a5a; margin-bottom:28px; font-weight:300; line-height:1.9;">カテゴリごとに気になる一品をチェック。タップで写真や説明も見られます。</p>
+  </div>
+  <div id="menu-categories"></div>
+</section>
+
+<!-- NEWS -->
+<section id="news" style="background:#141009; padding:60px 20px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">News</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:24px;">
+      <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; letter-spacing:0.03em;">お知らせ</h2>
+      <div style="display:inline-flex; align-items:center; gap:6px; background:#2a2016; padding:4px 11px; border-radius:20px; font-size:11px; color:#7a6a5a; letter-spacing:0.04em;">
+        <span style="width:5px; height:5px; border-radius:50%; background:#4d6e42; animation:pulse 2s infinite; display:inline-block; flex-shrink:0;"></span>
+        直近3件
+      </div>
+    </div>
+    <div id="news-grid" class="news-grid" style="display:grid; grid-template-columns:1fr; gap:16px;"></div>
+  </div>
+</section>
+
+<!-- SCENES -->
+<section id="scenes" style="background:#0d0905; padding:60px 20px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">Scenes</span>
+    </div>
+    <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; margin-bottom:28px; letter-spacing:0.03em;">こんな時間に、どうぞ。</h2>
+    <div class="scenes-grid" style="display:grid; grid-template-columns:1fr; gap:16px;">
+      <div style="background:#1c1510; border-radius:4px; overflow:hidden; box-shadow:0 3px 14px rgba(0,0,0,0.4);">
+        <div class="scene-img" style="height:200px; overflow:hidden;">
+          <img src="uploads/仕事帰りにふらっと一杯.png" alt="仕事帰りにふらっと一杯" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <div style="padding:14px 16px 18px;">
+          <div class="serif" style="font-size:14px; font-weight:500; color:#ede5d8; margin-bottom:6px; line-height:1.5; letter-spacing:0.02em;">仕事帰りにふらっと一杯</div>
+          <div style="font-size:12px; color:#7a6a5a; line-height:1.8; font-weight:300;">カウンター席でひとり、気軽に立ち寄れます。</div>
+        </div>
+      </div>
+      <div style="background:#1c1510; border-radius:4px; overflow:hidden; box-shadow:0 3px 14px rgba(0,0,0,0.4);">
+        <div class="scene-img" style="height:200px; overflow:hidden;">
+          <img src="uploads/友人とゆっくり小皿をつまみながら.png" alt="友人とゆっくり小皿をつまみながら" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <div style="padding:14px 16px 18px;">
+          <div class="serif" style="font-size:14px; font-weight:500; color:#ede5d8; margin-bottom:6px; line-height:1.5; letter-spacing:0.02em;">友人とゆっくり小皿をつまみながら</div>
+          <div style="font-size:12px; color:#7a6a5a; line-height:1.8; font-weight:300;">気の置けない仲間と、いろんな話をしながら。</div>
+        </div>
+      </div>
+      <div style="background:#1c1510; border-radius:4px; overflow:hidden; box-shadow:0 3px 14px rgba(0,0,0,0.4);">
+        <div class="scene-img" style="height:200px; overflow:hidden;">
+          <img src="uploads/おひとりさまでも過ごしやすいカウンター席.png" alt="おひとりさまでも過ごしやすいカウンター席" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <div style="padding:14px 16px 18px;">
+          <div class="serif" style="font-size:14px; font-weight:500; color:#ede5d8; margin-bottom:6px; line-height:1.5; letter-spacing:0.02em;">おひとりさまでも過ごしやすいカウンター席</div>
+          <div style="font-size:12px; color:#7a6a5a; line-height:1.8; font-weight:300;">ひとりの時間も、心地よく。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORE INFO -->
+<section id="info" style="background:#141009; padding:60px 20px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">Store Info</span>
+    </div>
+    <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; margin-bottom:28px; letter-spacing:0.03em;">店舗情報</h2>
+    <div class="store-inner" style="display:flex; flex-direction:column; gap:28px;">
+      <div style="flex:1; min-width:0;">
+        <table style="width:100%; border-collapse:collapse; font-size:14px;">
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; width:86px; vertical-align:top; font-size:12px; letter-spacing:0.04em; font-weight:300;">店名</td>
+            <td style="padding:12px 0; color:#ede5d8; font-weight:400;">ごはんと酒 灯り</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">住所</td>
+            <td style="padding:12px 0; color:#ede5d8;">宮城県〇〇市中央1-2-3</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">営業時間</td>
+            <td style="padding:12px 0; color:#ede5d8;">17:30〜23:00</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">定休日</td>
+            <td style="padding:12px 0; color:#ede5d8;">日曜・第2月曜</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">電話</td>
+            <td style="padding:12px 0; color:#ede5d8;">0220-00-0000</td>
+          </tr>
+          <tr style="border-bottom:1px solid #2a2016;">
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">Instagram</td>
+            <td style="padding:12px 0; color:#ede5d8;">@akari_izakaya</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 0; color:#7a6a5a; vertical-align:top; font-size:12px; font-weight:300;">予約</td>
+            <td style="padding:12px 0; color:#ede5d8; font-size:13px; line-height:1.7;">お電話またはInstagramのDMで受付</td>
+          </tr>
+        </table>
+      </div>
+      <div style="flex:1; min-width:0;">
+        <div style="width:100%; aspect-ratio:4/3; background:#1a1510; border:1px solid #2a2016; border-radius:4px; display:flex; align-items:center; justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:28px; color:#8a7a6a; margin-bottom:8px; line-height:1;">◎</div>
+            <div style="font-size:12px; color:#8a7a6a; letter-spacing:0.05em; font-weight:300;">Googleマップ 埋め込み</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="background:#0a0705; padding:72px 20px;">
+  <div style="max-width:560px; margin:0 auto; text-align:center;">
+    <div style="width:32px; height:1px; background:#6b5442; margin:0 auto 20px;"></div>
+    <h2 class="serif" style="font-size:20px; color:#e8e0d0; font-weight:400; line-height:1.9; margin-bottom:32px; letter-spacing:0.05em;">
+      今日のおすすめと一緒に、<br>お待ちしています。
+    </h2>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="tel:0220-00-0000" style="display:inline-flex; align-items:center; gap:8px; padding:14px 30px; background:#3f5835; color:white; text-decoration:none; font-size:13px; letter-spacing:0.07em; border-radius:2px; font-family:'Noto Sans JP',sans-serif; font-weight:500; box-shadow:0 2px 10px rgba(0,0,0,0.3);">電話する</a>
+      <a href="https://www.instagram.com/akari_izakaya" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; padding:13px 30px; background:transparent; color:#d8cfc4; text-decoration:none; font-size:13px; letter-spacing:0.07em; border-radius:2px; border:1.5px solid rgba(216,207,196,0.3); font-family:'Noto Sans JP',sans-serif;">Instagramを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#070503; padding:24px 20px 20px; border-top:1px solid rgba(255,255,255,0.05);">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
+      <div class="serif" style="font-size:14px; color:#7a6a5a; letter-spacing:0.08em;">ごはんと酒 灯り</div>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <a href="#specials" style="text-decoration:none; color:#6b5a4e; font-size:11px; letter-spacing:0.05em;">おすすめ</a>
+        <a href="#menu" style="text-decoration:none; color:#6b5a4e; font-size:11px; letter-spacing:0.05em;">メニュー</a>
+        <a href="#news" style="text-decoration:none; color:#6b5a4e; font-size:11px; letter-spacing:0.05em;">お知らせ</a>
+        <a href="#info" style="text-decoration:none; color:#6b5a4e; font-size:11px; letter-spacing:0.05em;">店舗情報</a>
+      </div>
+    </div>
+    <div style="text-align:center; font-size:10px; color:#ede5d8; letter-spacing:0.06em; padding-top:12px; border-top:1px solid rgba(255,255,255,0.04);">© 2025 Gohan to Sake Akari. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal-box modal-wrap" id="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="閉じる">×</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Claude Design handoff source (reference only, not part of the site)
+samplesite/
+
+# OS files
+.DS_Store
+Thumbs.db
