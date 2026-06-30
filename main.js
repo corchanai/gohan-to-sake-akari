@@ -357,22 +357,40 @@ function animateCarousels() {
   requestAnimationFrame(animateCarousels);
 }
 
+// 自動スクロール中はscroll-snapを切り、ユーザーが触れている間だけ
+// スナップを有効化する（JSのscrollLeft操作とmandatory snapが競合し、
+// 実機モバイルで自動スクロールが止まって見える問題への対策）。
+function setCarouselUserActive(track, active) {
+  track._userPaused = active;
+  track.classList.toggle('user-active', active);
+  if (!active && scrollData.has(track)) {
+    // 再開時、ユーザーが動かした位置から続きを再生する
+    scrollData.get(track).pos = track.scrollLeft;
+  }
+}
+
 function setupCarouselPauseHandlers() {
   document.addEventListener('mouseover', e => {
     const t = e.target.closest('.carousel-track');
-    if (t) t._userPaused = true;
+    if (t) setCarouselUserActive(t, true);
   });
   document.addEventListener('mouseout', e => {
     const t = e.target.closest('.carousel-track');
-    if (t) t._userPaused = false;
+    if (t) setCarouselUserActive(t, false);
   });
   document.addEventListener('touchstart', e => {
     const t = e.target.closest('.carousel-track');
-    if (t) t._userPaused = true;
+    if (t) {
+      clearTimeout(t._resumeTimer);
+      setCarouselUserActive(t, true);
+    }
   }, { passive: true });
   document.addEventListener('touchend', e => {
     const t = e.target.closest('.carousel-track');
-    if (t) setTimeout(() => { t._userPaused = false; }, 2000);
+    if (t) {
+      clearTimeout(t._resumeTimer);
+      t._resumeTimer = setTimeout(() => setCarouselUserActive(t, false), 2000);
+    }
   }, { passive: true });
 }
 
@@ -382,14 +400,11 @@ function setupCarouselArrows() {
       const targetId = btn.dataset.target;
       const track = targetId ? document.getElementById(targetId) : btn.closest('section').querySelector('.carousel-track');
       if (!track) return;
-      track._userPaused = true;
+      setCarouselUserActive(track, true);
       const dir = btn.dataset.arrow === 'prev' ? -1 : 1;
       track.scrollBy({ left: dir * 200, behavior: 'smooth' });
-      if (scrollData.has(track)) {
-        scrollData.get(track).pos = track.scrollLeft + dir * 200;
-      }
-      clearTimeout(btn._resumeTimer);
-      btn._resumeTimer = setTimeout(() => { track._userPaused = false; }, 2500);
+      clearTimeout(track._resumeTimer);
+      track._resumeTimer = setTimeout(() => setCarouselUserActive(track, false), 2500);
     });
   });
 }

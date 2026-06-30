@@ -15,13 +15,18 @@ body {
   overflow-x: auto;
   gap: 14px;
   padding: 4px 20px 16px;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type is toggled by JS: off while auto-scrolling, on while the
+     user is actively touching/dragging. Mandatory snap fights a JS-driven
+     scrollLeft animation (the browser keeps snapping back), which made the
+     carousel look frozen / manual-only on real mobile browsers. */
+  scroll-snap-type: none;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   cursor: grab;
 }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-track > * { scroll-snap-align: start; flex-shrink: 0; }
+.carousel-track.user-active { scroll-snap-type: x mandatory; }
 .carousel-track.grabbing { cursor: grabbing; }
 
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
