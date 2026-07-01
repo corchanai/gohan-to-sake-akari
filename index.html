@@ -16,15 +16,15 @@
     <img src="uploads/akari_logo.png" alt="ごはんと酒 灯り" style="height:42px; max-width:200px; object-fit:contain; object-position:left center; display:block; filter:invert(1) sepia(0.3);">
   </a>
   <nav class="pc-nav" style="display:none; gap:32px; align-items:center;">
+    <a href="#news" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">お知らせ</a>
     <a href="#specials" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">おすすめ</a>
     <a href="#menu" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">定番メニュー</a>
-    <a href="#news" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">お知らせ</a>
     <a href="#info" style="text-decoration:none; color:#5a4e40; font-size:13px; letter-spacing:0.05em; white-space:nowrap;">店舗情報</a>
   </nav>
   <div class="sp-only" style="display:flex; gap:16px; font-size:11px; color:#8a7a6a;">
+    <a href="#news" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">お知らせ</a>
     <a href="#specials" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">おすすめ</a>
     <a href="#menu" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">メニュー</a>
-    <a href="#news" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">お知らせ</a>
     <a href="#info" style="text-decoration:none; color:#8a7a6a; white-space:nowrap;">店舗情報</a>
   </div>
 </header>
@@ -87,8 +87,26 @@
   </div>
 </section>
 
+<!-- NEWS -->
+<section id="news" style="background:#141009; padding:60px 20px;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
+      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">News</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:24px;">
+      <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; letter-spacing:0.03em;">お知らせ</h2>
+      <div style="display:inline-flex; align-items:center; gap:6px; background:#2a2016; padding:4px 11px; border-radius:20px; font-size:11px; color:#7a6a5a; letter-spacing:0.04em;">
+        <span style="width:5px; height:5px; border-radius:50%; background:#4d6e42; animation:pulse 2s infinite; display:inline-block; flex-shrink:0;"></span>
+        直近3件
+      </div>
+    </div>
+    <div id="news-grid" class="news-grid" style="display:grid; grid-template-columns:1fr; gap:16px;"></div>
+  </div>
+</section>
+
 <!-- TODAY'S SPECIALS -->
-<section id="specials" style="background:#141009; padding:60px 0 48px;">
+<section id="specials" style="background:#0d0905; padding:60px 0 48px;">
   <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
       <div style="width:28px; height:1px; background:#4a3a2e;"></div>
@@ -117,7 +135,7 @@
 </section>
 
 <!-- REGULAR MENU -->
-<section id="menu" style="background:#0d0905; padding:60px 0 44px;">
+<section id="menu" style="background:#141009; padding:60px 0 44px;">
   <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
       <div style="width:28px; height:1px; background:#4a3a2e;"></div>
@@ -128,24 +146,6 @@
   </div>
   <div style="max-width:1100px; margin:0 auto;">
     <div id="menu-categories"></div>
-  </div>
-</section>
-
-<!-- NEWS -->
-<section id="news" style="background:#141009; padding:60px 20px;">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-      <div style="width:28px; height:1px; background:#4a3a2e;"></div>
-      <span style="font-size:11px; color:#8a7a6a; letter-spacing:0.14em; text-transform:uppercase;">News</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:24px;">
-      <h2 class="serif" style="font-size:24px; font-weight:500; color:#ede5d8; letter-spacing:0.03em;">お知らせ</h2>
-      <div style="display:inline-flex; align-items:center; gap:6px; background:#2a2016; padding:4px 11px; border-radius:20px; font-size:11px; color:#7a6a5a; letter-spacing:0.04em;">
-        <span style="width:5px; height:5px; border-radius:50%; background:#4d6e42; animation:pulse 2s infinite; display:inline-block; flex-shrink:0;"></span>
-        直近3件
-      </div>
-    </div>
-    <div id="news-grid" class="news-grid" style="display:grid; grid-template-columns:1fr; gap:16px;"></div>
   </div>
 </section>
 
