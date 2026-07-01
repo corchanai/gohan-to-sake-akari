@@ -29,6 +29,19 @@ body {
 .carousel-track.user-active { scroll-snap-type: x mandatory; }
 .carousel-track.grabbing { cursor: grabbing; }
 
+/* 手動スクロールのカルーセルに「まだ続きがある」ことを示す右端フェード */
+.carousel-wrap { position: relative; }
+.carousel-wrap::after {
+  content: '';
+  position: absolute; top: 0; right: 0; bottom: 16px;
+  width: 40px;
+  background: linear-gradient(to right, transparent, #0d0905 85%);
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.carousel-wrap.at-end::after,
+.carousel-wrap.no-overflow::after { opacity: 0; }
+
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
 
 /* card image with optional real photo */

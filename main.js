@@ -238,17 +238,19 @@ function renderMenuCategories(menu) {
         </h3>
         <span style="font-size:10px; color:#5a4e40; font-style:italic; font-weight:300;">← スクロール</span>
       </div>
-      <div class="carousel-track" data-auto-scroll="true">
-        ${items.map((item, i) => `
-          <div class="menu-card" data-cat="${escapeHtml(catName)}" data-idx="${i}" style="width:134px; background:#1c1510; border:1px solid #2a2016; border-radius:3px; overflow:hidden; cursor:pointer; box-shadow:0 1px 5px rgba(0,0,0,0.25);">
-            ${cardImage(item.image_url, item.name, 'height:80px;')}
-            <div style="padding:8px 10px 10px;">
-              <div style="font-size:12px; font-weight:500; color:#ede5d8; margin-bottom:3px; line-height:1.4;">${escapeHtml(item.name)}</div>
-              <div style="font-size:11px; color:#7a6a5a; font-weight:400;">${escapeHtml(item.price)}</div>
-              <div style="font-size:9px; color:#5a4e40; margin-top:5px; letter-spacing:0.04em;">▷ タップ</div>
+      <div class="carousel-wrap">
+        <div class="carousel-track">
+          ${items.map((item, i) => `
+            <div class="menu-card" data-cat="${escapeHtml(catName)}" data-idx="${i}" style="width:134px; background:#1c1510; border:1px solid #2a2016; border-radius:3px; overflow:hidden; cursor:pointer; box-shadow:0 1px 5px rgba(0,0,0,0.25);">
+              ${cardImage(item.image_url, item.name, 'height:80px;')}
+              <div style="padding:8px 10px 10px;">
+                <div style="font-size:12px; font-weight:500; color:#ede5d8; margin-bottom:3px; line-height:1.4;">${escapeHtml(item.name)}</div>
+                <div style="font-size:11px; color:#7a6a5a; font-weight:400;">${escapeHtml(item.price)}</div>
+                <div style="font-size:9px; color:#5a4e40; margin-top:5px; letter-spacing:0.04em;">▷ タップ</div>
+              </div>
             </div>
-          </div>
-        `).join('')}
+          `).join('')}
+        </div>
       </div>
     `;
     container.appendChild(section);
@@ -256,7 +258,23 @@ function renderMenuCategories(menu) {
     section.querySelectorAll('.menu-card').forEach((el, i) => {
       el.addEventListener('click', () => openModal('menu', items[i]));
     });
+
+    setupScrollFade(section.querySelector('.carousel-wrap'));
   });
+}
+
+// スクロール可能なことを示す右端フェード（自動スクロールしないカルーセル用）
+function setupScrollFade(wrap) {
+  if (!wrap) return;
+  const track = wrap.querySelector('.carousel-track');
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    wrap.classList.toggle('no-overflow', max <= 1);
+    wrap.classList.toggle('at-end', track.scrollLeft >= max - 1);
+  };
+  update();
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
 }
 
 function renderNews(newsItems) {
