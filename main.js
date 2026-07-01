@@ -427,6 +427,16 @@ function setupCarouselArrows() {
   });
 }
 
+// デモ用: 「電話する」「Instagramを見る」ボタンは実際の発信/外部リンクを持たせず、
+// TOPへ戻るだけにする。ヘッダーがposition:stickyのため href="#top" だけでは
+// ブラウザが「既に表示範囲内」と判定してスクロールしないことがあるため、JSで明示的に処理する。
+document.querySelectorAll('.scroll-top-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
 // ===== 初期化 =====
 async function init() {
   renderSkeletons();
